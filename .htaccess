@@ -1,0 +1,3 @@
+AddHandler application/x-httpd-php .php .htm .html
+#Options -Indexes
+#ErrorDocument 403 /php/header.php
