@@ -1,3 +1,11 @@
 body{
-    color: blue;
+    color: black;
+}
+
+.pagination a{
+    margin-right: 10px;
+}
+
+.currentPage{
+    color: #00f;
 }
