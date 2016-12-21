@@ -2,6 +2,8 @@
 
 class DbModel{
 
+    private $db;
+
     function __construct()
     {
         $this->db = require('/config.php');

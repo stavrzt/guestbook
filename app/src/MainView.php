@@ -1,8 +1,11 @@
 <?php
 
 class MainView{
-    function __construct($view = null){
-       $this->view = $view;
+
+    function getPageView($pageData){
+        $renderedComments = $this->renderView('/app/view/CommentView.php', $pageData['comments']);
+        $renderedPagination = $this->renderView('/app/view/PaginationView.php', $pageData['pagination']);
+        require ('app/view/PageView.php');
     }
 
     private function renderView($view, $params = [])
@@ -20,6 +23,5 @@ class MainView{
         }
         return ob_get_clean();
     }
-
 
 }

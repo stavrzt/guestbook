@@ -14,10 +14,10 @@
 <header></header>
 
 <div class="content">
-<?=
-$commentsData;
-?>
+<?= $renderedComments ?>
 </div>
+
+<?= $renderedPagination ?>
 
 <form action="">
     <label for="email">E-mail:</label>
