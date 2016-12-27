@@ -1,7 +1,5 @@
 <?php
-require_once('app/src/MainController.php');
-require_once('config.php');
+require_once 'vendor/autoload.php';
 
-$mainController = new MainController();
-
+$mainController = new app\src\MainController();
 $mainController->getPage();
