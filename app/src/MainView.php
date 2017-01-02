@@ -1,6 +1,6 @@
 <?php
 
-namespace app\src {
+namespace app\src;
 
     class MainView
     {
@@ -11,7 +11,7 @@ namespace app\src {
             require 'app/view/PageView.php';
         }
 
-        private function renderView($view, $params = [])
+        function renderView($view, $params = [])
         {
             ob_start();
             ob_implicit_flush(false);
@@ -27,4 +27,3 @@ namespace app\src {
             return ob_get_clean();
         }
     }
-}

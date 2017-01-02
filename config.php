@@ -1,10 +1,11 @@
 <?php
 
-$user = 'root';
-$pass = '';
+const USER = 'root';
+const PASS = '';
 
 try {
-    return $db = new PDO('mysql:host=127.0.0.1:3307;dbname=guestbook', $user, $pass);
+    /* Return PDO instance of for connect with database */
+    return new PDO('mysql:host=127.0.0.1:3307;dbname=guestbook', USER, PASS);
 } catch (PDOException $e) {
-    echo 'Подключение не удалось: ' . $e->getMessage();
+    echo 'Connection failed: ' . $e->getMessage();
 }

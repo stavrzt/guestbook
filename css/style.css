@@ -3,9 +3,10 @@ body{
 }
 
 .pagination a{
-    margin-right: 10px;
+    margin-right: 50px;
 }
 
 .currentPage{
     color: #00f;
+    cursor: default;
 }
