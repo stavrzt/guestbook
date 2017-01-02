@@ -2,4 +2,4 @@
 require_once 'vendor/autoload.php';
 
 $mainController = new app\src\MainController();
-$mainController->getPage();
+$mainController->run();

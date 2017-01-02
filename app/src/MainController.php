@@ -1,31 +1,26 @@
 <?php
-namespace app\src {
+namespace app\src;
 
     class MainController
     {
-
         private $mainModel;
         private $mainView;
 
         function __construct()
         {
-            $this->mainModel = new \app\src\MainModel();
-            $this->mainView = new \app\src\MainView();
+            $this->mainModel = new MainModel();
+            $this->mainView = new MainView();
         }
 
-        function getPage()
+        /*
+         * Get page data and show them
+         *
+         * @param int|null $pageNumber Set custom or default page number. If get null it will be the last page of comments
+         * @param int $commentsPerPage Sets the number of comments per page
+         */
+        function run($pageNumber = null, $commentsPerPage = 5)
         {
-            $pageData = $this->mainModel->getPage();
+            $pageData = $this->mainModel->getPage($pageNumber, $commentsPerPage);
             $this->mainView->getPageView($pageData);
         }
-
-        /* for ajax
-        function getComments(){
-            $commentsData = $this->mainModel->getPage();
-            return $this->mainView->renderView($commentsData);
-        }
-        */
-
     }
-
-}
